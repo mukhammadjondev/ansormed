@@ -1,17 +1,28 @@
 /* Core style */
-* {
+:root {
+    --accent-color: #DE2E54;
+    --font-text: 'Open Sans', 'Arial', sans-serif;
+    --font-heading: 'Open Sans Condensed', 'Open Sans', 'Arial', sans-serif;
+}
+
+html {
     box-sizing: border-box;
+    height: 100%;
+    scroll-behavior: smooth;
 }
 
 *:focus {
-    outline: 2px dotted #DE2E54;
+    outline: 2px dotted var(--accent-color);
     outline-offset: 2px;
 }
 
 body {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
     margin: 0;
     padding: 0;
-    font-family: 'Open Sans', 'Arial', sans-serif;
+    font-family: var(--font-text);
     font-size: 16px;
     line-height: 1.5;
     color: #444;
@@ -43,7 +54,7 @@ body {
 }
 
 .site-logo:hover {
-    color: #DE2E54;
+    color: var(--accent-color);
 }
 
 .site-logo:active {
@@ -86,7 +97,7 @@ body {
 }
 
 .navigation-item a:hover {
-    color: #DE2E54;
+    color: var(--accent-color);
 }
 
 .navigation-item a:active {
@@ -95,14 +106,14 @@ body {
 
 .main-link {
     display: inline-block;
-    font-family: 'Open Sans Condensed', 'Open Sans', 'Arial', sans-serif;
+    font-family: var(--font-heading);
     font-size: 15px;
     font-weight: 700;
     letter-spacing: 2px;
-    background-color: #DE2E54;
+    background-color: var(--accent-color);
     color: #fff;
     padding: 10px 22px;
-    border: 2px solid #DE2E54;
+    border: 2px solid var(--accent-color);
     border-radius: 8px;
     text-transform: uppercase;
     text-decoration: none;
@@ -110,11 +121,11 @@ body {
 
 .main-link:hover {
     background-color: #fff;
-    color: #DE2E54;
+    color: var(--accent-color);
 }
 
 .main-link:active {
-    background-color: #DE2E54;
+    background-color: var(--accent-color);
     color: #fff;
     opacity: 0.6;
 }
@@ -136,7 +147,7 @@ body {
     margin: 0;
     margin-bottom: 16px;
     width: 500px;
-    font-family: 'Open Sans Condensed', 'Open Sans', 'Arial', sans-serif;
+    font-family: var(--font-heading);
     font-weight: 700;
     font-size: 36px;
     line-height: 1.2;
@@ -174,7 +185,7 @@ body {
 .services-heading {
     margin: 0;
     margin-bottom: 56px;
-    font-family: 'Open Sans Condensed', 'Open Sans', 'Arial', sans-serif;
+    font-family: var(--font-heading);
     font-weight: 700;
     font-size: 36px;
     line-height: 1.2;
@@ -238,7 +249,7 @@ body {
     justify-content: center;
     margin: 0;
     margin-bottom: 40px;
-    font-family: 'Open Sans Condensed', 'Open Sans', 'Arial', sans-serif;
+    font-family: var(--font-heading);
     font-weight: 700;
     font-size: 36px;
     line-height: 1.2;
@@ -257,7 +268,7 @@ body {
 
 .blog-link:hover {
     border-color: transparent;
-    background-color: #DE2E54;
+    background-color: var(--accent-color);
     color: #fff;
 }
 
