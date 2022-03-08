@@ -147,7 +147,7 @@ body {
 .main-section__title {
     margin: 0;
     margin-bottom: 1rem;
-    width: 500px;
+    max-width: 500px;
     font-family: var(--font-heading);
     font-weight: 700;
     font-size: 2.25rem;
@@ -157,7 +157,7 @@ body {
 .main-section__description {
     margin: 0;
     margin-bottom: 2.25rem;
-    width: 440px;
+    max-width: 440px;
     font-size: 1.125rem;
 }
 
@@ -175,6 +175,7 @@ body {
 .main-section__img {
     width: 423px;
     height: 504px;
+    object-fit: cover;
 }
 
 /* Services section */
@@ -195,7 +196,7 @@ body {
 }
 
 .services-cards {
-    width: 864px;
+    max-width: 864px;
     padding: 0;
     margin: 0;
     margin-bottom: 3.75rem;
@@ -222,7 +223,7 @@ body {
 }
 
 .services-card__content {
-    width: 600px;
+    max-width: 600px;
     margin-left: 4rem;
 }
 
@@ -296,4 +297,74 @@ body {
 
 .footer-container a:active {
     color: #fff;
+}
+
+
+@media only screen and (max-width: 991px) {
+    html {
+        font-size: 14px;
+    }
+    
+    .container {
+        width: 90%;
+    }
+
+    .header .navigation {
+        display: none;
+    }
+
+    .main-section__container {
+        padding-top: 100px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }    
+
+    .main-section__img {
+        align-self: flex-end;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    html {
+        font-size: 12px;
+    }
+
+    .navigation {
+        display: none;
+    }
+
+    .main-section__img {
+        margin-top: 30px;
+        width: 323px;
+        height: 404px;
+    }
+
+    .services-card {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .services-card__content {
+        max-width: 210px;
+    }
+
+    .services-card__img { 
+        margin-bottom: 20px;
+    }
+
+    .blog-link__container {
+        flex-direction: column;
+    }
+    
+    .blog-link {
+        align-self: center;
+        margin-bottom: 20px;
+        width: 250px;
+        text-align: center;
+    }
+
+    .blog-link:not(:last-child) {
+        margin-right: 0;
+    }
 }
